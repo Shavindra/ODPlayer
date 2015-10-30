@@ -1,0 +1,15 @@
+{
+    "name": "ODPlayer",
+    "version": "1.0.0",
+    "dependencies": {
+        "angular": "^1.4.7",
+        "bower": "^1.6.5",
+        "glob": "^5.0.15",
+        "gulp": "^3.9.0",
+        "require-dir": "^0.3.0",
+        "walk": "^2.3.9",
+        "wiredep": "^3.0.0-beta",
+        "q": "^1.4.1"
+    }
+
+}
