@@ -5,6 +5,7 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <Name>ODPlay</Name>
     <RootNamespace>ODPlay</RootNamespace>
+    <NodeExePath>C:\Program Files (x86)\nodejs\node.exe</NodeExePath>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -15,13 +16,13 @@
     <StartupFile>server.js</StartupFile>
     <SearchPath>
     </SearchPath>
-    <WorkingDirectory>.</WorkingDirectory>
+    <WorkingDirectory>C:\Program Files (x86)\nodejs</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
     <ProjectView>ShowAllFiles</ProjectView>
     <NodejsPort>1337</NodejsPort>
-    <StartWebBrowser>true</StartWebBrowser>
+    <StartWebBrowser>True</StartWebBrowser>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,11 +32,63 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app_tasks\task_bower.js" />
-    <Compile Include="app_tasks\task_build.js" />
-    <Compile Include="app_tasks\task_util_asset_map.js" />
-    <Compile Include="app_tasks\task_util_bower_map.js" />
-    <Compile Include="app_tasks\utils_bower_copy_assets.js" />
-    <Compile Include="app_tasks\utils_clean_assets.js" />
+    <Compile Include="app_tasks\task_dist_assets.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-animate\angular-animate.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-animate\angular-animate.min.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-animate\index.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-cookies\angular-cookies.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-cookies\angular-cookies.min.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-cookies\index.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-mocks\angular-mocks.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-mocks\ngAnimateMock.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-mocks\ngMock.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-mocks\ngMockE2E.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-resource\angular-resource.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-resource\angular-resource.min.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-resource\index.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-route\angular-route.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-route\angular-route.min.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-route\index.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-sanitize\angular-sanitize.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-sanitize\angular-sanitize.min.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-sanitize\index.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-scenario\angular-scenario.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-scenario\jstd-scenario-adapter-config.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-scenario\jstd-scenario-adapter.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-touch\angular-touch.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-touch\angular-touch.min.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-touch\index.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-ui-router\angular-ui-router.js" />
+    <Compile Include="dist\app\assets\js\libs\angular-ui-router\angular-ui-router.min.js" />
+    <Compile Include="dist\app\assets\js\libs\angular\angular.js" />
+    <Compile Include="dist\app\assets\js\libs\angular\angular.min.js" />
+    <Compile Include="dist\app\assets\js\libs\angular\index.js" />
+    <Compile Include="dist\app\assets\js\libs\bootstrap\affix.js" />
+    <Compile Include="dist\app\assets\js\libs\bootstrap\alert.js" />
+    <Compile Include="dist\app\assets\js\libs\bootstrap\bootstrap.js" />
+    <Compile Include="dist\app\assets\js\libs\bootstrap\bootstrap.min.js" />
+    <Compile Include="dist\app\assets\js\libs\bootstrap\bs-glyphicons-data-generator.js" />
+    <Compile Include="dist\app\assets\js\libs\bootstrap\bs-lessdoc-parser.js" />
+    <Compile Include="dist\app\assets\js\libs\bootstrap\bs-raw-files-generator.js" />
+    <Compile Include="dist\app\assets\js\libs\bootstrap\button.js" />
+    <Compile Include="dist\app\assets\js\libs\bootstrap\carousel.js" />
+    <Compile Include="dist\app\assets\js\libs\bootstrap\collapse.js" />
+    <Compile Include="dist\app\assets\js\libs\bootstrap\dropdown.js" />
+    <Compile Include="dist\app\assets\js\libs\bootstrap\Gruntfile.js" />
+    <Compile Include="dist\app\assets\js\libs\bootstrap\modal.js" />
+    <Compile Include="dist\app\assets\js\libs\bootstrap\popover.js" />
+    <Compile Include="dist\app\assets\js\libs\bootstrap\scrollspy.js" />
+    <Compile Include="dist\app\assets\js\libs\bootstrap\tab.js" />
+    <Compile Include="dist\app\assets\js\libs\bootstrap\tooltip.js" />
+    <Compile Include="dist\app\assets\js\libs\bootstrap\transition.js" />
+    <Compile Include="dist\app\assets\js\libs\es5-shim\es5-sham.js" />
+    <Compile Include="dist\app\assets\js\libs\es5-shim\es5-sham.min.js" />
+    <Compile Include="dist\app\assets\js\libs\es5-shim\es5-shim.js" />
+    <Compile Include="dist\app\assets\js\libs\es5-shim\es5-shim.min.js" />
+    <Compile Include="dist\app\assets\js\libs\jquery\jquery.js" />
+    <Compile Include="dist\app\assets\js\libs\jquery\jquery.min.js" />
+    <Compile Include="dist\app\assets\js\libs\json3\json3.js" />
+    <Compile Include="dist\app\assets\js\libs\json3\json3.min.js" />
     <Compile Include="gulpfile.js" />
     <Compile Include="server.js" />
     <Compile Include="www\assets\components\angular-animate\angular-animate.js" />
@@ -420,6 +473,17 @@
     <Compile Include="www\assets\components\json3\lib\json3.min.js" />
     <Compile Include="www\scripts\index.js" />
     <Compile Include="www\scripts\platformOverrides.js" />
+    <Content Include="bower.json" />
+    <Content Include="dist\app\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="dist\app\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="dist\app\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="dist\app\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="dist\app\assets\styles\css\vendor\angular\angular-csp.css" />
+    <Content Include="dist\app\assets\styles\css\vendor\bootstrap\bootstrap-theme.css" />
+    <Content Include="dist\app\assets\styles\css\vendor\bootstrap\bootstrap-theme.min.css" />
+    <Content Include="dist\app\assets\styles\css\vendor\bootstrap\bootstrap.css" />
+    <Content Include="dist\app\assets\styles\css\vendor\bootstrap\bootstrap.min.css" />
+    <Content Include="dist\index.html" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="www\assets\components\angular-animate\.bower.json" />
@@ -1082,6 +1146,31 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app_tasks\" />
+    <Folder Include="dist\" />
+    <Folder Include="dist\app\" />
+    <Folder Include="dist\app\assets\" />
+    <Folder Include="dist\app\assets\fonts\" />
+    <Folder Include="dist\app\assets\js\" />
+    <Folder Include="dist\app\assets\js\libs\" />
+    <Folder Include="dist\app\assets\js\libs\angular-animate\" />
+    <Folder Include="dist\app\assets\js\libs\angular-cookies\" />
+    <Folder Include="dist\app\assets\js\libs\angular-mocks\" />
+    <Folder Include="dist\app\assets\js\libs\angular-resource\" />
+    <Folder Include="dist\app\assets\js\libs\angular-route\" />
+    <Folder Include="dist\app\assets\js\libs\angular-sanitize\" />
+    <Folder Include="dist\app\assets\js\libs\angular-scenario\" />
+    <Folder Include="dist\app\assets\js\libs\angular-touch\" />
+    <Folder Include="dist\app\assets\js\libs\angular-ui-router\" />
+    <Folder Include="dist\app\assets\js\libs\angular\" />
+    <Folder Include="dist\app\assets\js\libs\bootstrap\" />
+    <Folder Include="dist\app\assets\js\libs\es5-shim\" />
+    <Folder Include="dist\app\assets\js\libs\jquery\" />
+    <Folder Include="dist\app\assets\js\libs\json3\" />
+    <Folder Include="dist\app\assets\styles\" />
+    <Folder Include="dist\app\assets\styles\css\" />
+    <Folder Include="dist\app\assets\styles\css\vendor\" />
+    <Folder Include="dist\app\assets\styles\css\vendor\angular\" />
+    <Folder Include="dist\app\assets\styles\css\vendor\bootstrap\" />
     <Folder Include="www\" />
     <Folder Include="www\assets\" />
     <Folder Include="www\assets\components\" />
