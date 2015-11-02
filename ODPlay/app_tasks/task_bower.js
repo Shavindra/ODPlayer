@@ -1,15 +1,13 @@
 ﻿var gulp = require('gulp'),
     wiredep = require('wiredep').stream,
     rename = require("gulp-rename"),
-    rmdir = require('rimraf'),
+    rimraf = require('rimraf'),
     tap = require('gulp-tap'),
     fs = require('fs'),
     path = require('path'),
     run = require('gulp-run'),
     srcDir = 'src/app/assets/',
     distDir = 'dist/app/assets/';
-
-
 
 
 function renameDir(prefix, fileExt, suffix) {
@@ -91,10 +89,6 @@ gulp.task('bower-html', function () {
     .pipe(gulp.dest('./dist'));
 
 });
-
-gulp.task('clean-assets', function () {
-    rmdir(distDir, function (error) { });
-})
 
 //Copy bower files from bower main directory to actual source directory
 gulp.task('bower-copy', function () {

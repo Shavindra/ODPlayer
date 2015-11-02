@@ -1,0 +1,81 @@
+﻿{
+    "build": {
+        "paths": {
+
+            "main": "build/",
+            "assets": {
+                "main": "build/assets/",
+                "js": "build/assets/js",
+                "css": "build/assets/styles/css",
+                "sass": "build/assets/styles/sass",
+                "images": "build/assets/images/",
+                "fonts": "build/assets/fonts/",
+                "vendor": {
+                    "js": "build/assets/js/libs/",
+                    "css": "build/assets/js/vendor/"
+                }
+            }
+
+        }
+
+    },
+    "dist": {
+        "paths": {
+
+            "main": "dist/",
+            "assets": {
+                "main": "dist/assets/",
+                "js": "dist/assets/js",
+                "css": "dist/assets/styles/css",
+                "sass": "dist/assets/styles/sass",
+                "images": "dist/assets/images/",
+                "fonts": "dist/assets/fonts/",
+                "vendor": {
+                    "js": "dist/assets/js/libs/",
+                    "css": "dist/assets/js/vendor/"
+                }
+            }
+
+        }
+    },
+    "src": {
+        "paths": {
+
+            "main": "src/",
+            "assets": {
+                "main": "src/assets/",
+                "js": "src/assets/js",
+                "css": "src/assets/styles/css",
+                "sass": "src/assets/styles/sass",
+                "images": "src/assets/images/",
+                "fonts": "src/assets/fonts/",
+                "vendor": {
+                    "js": "src/assets/js/libs/",
+                    "css": "src/assets/js/vendor/"
+                }
+            }
+        }
+
+    },
+    "deploy": {
+        "paths": {
+
+            "main": "www/",
+            "assets": {
+                "main": "www/assets/",
+                "js": "www/assets/js",
+                "css": "www/assets/styles/css",
+                "sass": "www/assets/styles/sass",
+                "images": "www/assets/images/",
+                "fonts": "www/assets/fonts/",
+                "vendor": {
+                    "js": "www/assets/js/libs/",
+                    "css": "www/assets/js/vendor/"
+                }
+            }
+        }
+
+    }
+
+
+}
