@@ -1,5 +1,14 @@
-﻿var wiredep = require('wiredep').stream;
-var gulp = require('gulp');
+﻿var gulp = require('gulp'),
+    wiredep = require('wiredep').stream,
+    rename = require("gulp-rename"),
+    rmdir = require('rimraf'),
+
+    srcDir = 'src/app/assets/',
+    distDir = 'dist/app/assets/';
+
+gulp.task('clean-assets', function () {
+    rmdir(distDir, function (error) { });
+})
 
 gulp.task('bower', function () {
     gulp.src('./www/index.html')
