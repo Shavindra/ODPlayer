@@ -10,10 +10,11 @@ gulp.task('clean-assets', function () {
     rmdir(distDir, function (error) { });
 })
 
-gulp.task('bower', function () {
+//When Bower install runs it will add the file paths to the index
+gulp.task('bower-html', function () {
     gulp.src('./www/index.html')
       .pipe(wiredep({
-          ignorePath: "assets/components",
+          ignorePath: "bower_components",
           fileTypes: {
               html: {
                   block: /(([ \t]*)<!--\s*bower:*(\S*)\s*-->)(\n|\r|.)*?(<!--\s*endbower\s*-->)/gi,
@@ -22,8 +23,8 @@ gulp.task('bower', function () {
                       css: /<link.*href=['"]([^'"]+)/gi
                   },
                   replace: {
-                      js: '<script src="/assets/js/vendor{{filePath}}"></script>',
-                      css: '<link rel="stylesheet" href="/assets/js/vendor{{filePath}}" />'
+                      js: '<script src="/assets/js/libs/{{filePath}}"></script>',
+                      css: '<link rel="stylesheet" href="/assets/styles/css/vendor/{{filePath}}" />'
                   }
               }
           }
