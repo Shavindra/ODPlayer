@@ -1,5 +1,7 @@
-﻿var rimraf = require('rimraf');
+﻿var gulp = require('gulp'),
+    rimraf = require('rimraf'),
+    distDir = 'dist/app/assets/';
 
 gulp.task('clean-assets', function () {
-    rimraf(distDir, function (error) { });
+   return rimraf(distDir, function (error) { });
 });

@@ -1,0 +1,46 @@
+﻿{
+    "views": {
+        "dir": "views/",
+        "pages": {
+            "dir": "pages/",
+            "list": [
+                {
+                    "dir": "home/",
+
+                    "name": "page_home",
+                    "controller": "page_home_controller",
+                    "template": "page_home_view"
+                }
+            ]
+        },
+        "components": {
+            "dir": "compnents/",
+            "list": [
+                {
+                    "dir": "header/",
+                    "name": "cmpt_header",
+                    "controller": "cmpt_header_controller",
+                    "template": "cmpt_header_view"
+                },
+                {
+                    "dir": "footer/",
+
+                    "name": "cmpt_footer",
+                    "controller": "cmpt_footer_controller",
+                    "template": "cmpt_footer_view"
+                }
+            ]
+
+        }
+    },
+
+    "service": {
+        "dir": "services/",
+        "list": [
+            {
+                "name": "svc_",
+                "file": "svc_"
+            }
+        ]
+    }
+}
