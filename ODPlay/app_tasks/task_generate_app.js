@@ -85,7 +85,7 @@ gulp.task('generate-app', function () {
         }
 
     }
-    
+    console.log(appFileList);
     createFiles(appFileList);
 
 });

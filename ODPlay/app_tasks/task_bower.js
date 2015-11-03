@@ -55,7 +55,7 @@ function renameDir(prefix, fileExt, suffix) {
 
 //When Bower install runs it will add the file paths to the index
 gulp.task('bower-html', function () {
-    gulp.src('./www/index.html')
+    gulp.src('./src/app/index.html')
       .pipe(wiredep({
         ignorePath: "bower_components/",
         fileTypes: {
@@ -68,13 +68,13 @@ gulp.task('bower-html', function () {
                 replace: {
                     js: function (filePath) {
                         var pathObj = path.parse(filePath);                                     
-                        var newPath = srcDir + 'js/libs/' + pathObj.name + '/' + pathObj.base;
+                        var newPath = 'assets/' + 'js/libs/' + pathObj.name + '/' + pathObj.base;
                         return '<script src="' + newPath + '"></script>';
                     },
                     css: function (filePath) {
                         var pathObj = path.parse(filePath);
-                        var newPath = srcDir + 'styles/css/vendor/' + pathObj.name + '/' + pathObj.base;
-                        return '<script src="' + newPath + '"></script>';
+                        var newPath = 'assets/' + 'styles/css/vendor/' + pathObj.name + '/' + pathObj.base;
+                        return ' <link rel="stylesheet" type="text/css" href="' + newPath + '" />';
                     },
                 }
             }
@@ -107,4 +107,6 @@ gulp.task('bower-copy', function () {
     .pipe(gulp.dest(srcDir));
 
 });
+
+
 
