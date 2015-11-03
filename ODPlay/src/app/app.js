@@ -1,6 +1,11 @@
 ﻿(function (window, angular) {
     
-    var ODPApp = angular.module(window.APP.name, []);
+    var moduleName = window.APP.ModuleNames.main || 'App'
+    
+   
+    var app = angular.module(moduleName, []);
+
+
 
 
 })(window, angular)

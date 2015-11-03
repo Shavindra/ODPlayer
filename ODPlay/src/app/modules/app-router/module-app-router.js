@@ -1,6 +1,6 @@
 (function (window, angular) {
     
-    var moduleName = window.APP.name + '-Router';
+    var moduleName = window.APP.ModuleNames.router || 'App';
     
     var appRouter = angular.module(moduleName, ['ngRoute', 'ui.router'])
     
