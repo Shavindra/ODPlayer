@@ -1,7 +1,8 @@
 ﻿<!DOCTYPE html>
-<html ng-app="ODPApp">
+<html ng-app="app">
 <head>
     <meta charset="utf-8" />
+    <base href="/#">
 
     <!--
         Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
@@ -22,7 +23,7 @@
             <a href="/login">Login</a>
         </li>
     </ul>
-    <div ng-view class="view-frame"></div>
+    <div ui-view class="view-frame"></div>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="assets/js/libs/angular/angular.js"></script>
@@ -48,6 +49,13 @@
     <script src="app.config.js"></script>
     <script src="app.js"></script>
     <script src="modules/app-router/module-app-router.js"></script>
+
+    <!-- views -->
+    <script src="views/pages/home/page-home-controller.js"></script>
+    <script src="views/pages/register/page-register-controller.js"></script>
+    <script src="views/pages/dashboard/page-dashboard-controller.js"></script>
+    <script src="views/pages/users/page-users-controller.js"></script>
+
     <!--<script src="scripts/index.js"></script>-->
 </body>
 </html>

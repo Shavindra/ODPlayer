@@ -98,6 +98,7 @@
     <Compile Include="src\app\assets\js\libs\jquery\jquery.min.js" />
     <Compile Include="src\app\assets\js\libs\json3\json3.js" />
     <Compile Include="src\app\assets\js\libs\json3\json3.min.js" />
+    <Compile Include="src\app\modules\app-controllers\module-app-controllers.js" />
     <Compile Include="src\app\modules\app-router\module-app-router.js" />
     <Compile Include="src\app\modules\app-session\module-inc-session.js" />
     <Compile Include="src\app\services\svc\svc_.js" />
@@ -302,6 +303,7 @@
     <Folder Include="src\app\assets\styles\css\vendor\angular\" />
     <Folder Include="src\app\assets\styles\css\vendor\bootstrap\" />
     <Folder Include="src\app\modules\" />
+    <Folder Include="src\app\modules\app-controllers\" />
     <Folder Include="src\app\modules\app-router\" />
     <Folder Include="src\app\modules\app-session\" />
     <Folder Include="src\app\services\" />

@@ -1,30 +1,16 @@
 (function (window, angular) {
     
-    var moduleName = window.APP.ModuleNames.config || 'App',
-        app = angular.module(moduleName, []);
+    var appModuleName = window.APP.ModuleNames.main || 'App',
+        appConfig = window.APP.ModuleNames.config,
+        appControllers = window.APP.ModuleNames.controllers;
+
+        app = angular.module(appControllers, [appConfig]);
     
-    //App meta data
-    app.constant('APP_META', {
+        app.controller('RegisterPageCtrl', ['$scope', function ($scope) { 
         
-        appName: 'OD Player',
-        appVersion: 2.0,
-        apiUrl: 'http://www.google.com?api'
-        
-    });
-    
-    //App module names
-    app.constant('MODULE_NAMES', window.APP.ModuleNames);
-    
-    //App user roles
-    app.constant('USER_ROLES', {
-        
-        all: '*',
-        admin: 'admin',
-        guest: 'http://www.google.com?api',
-        paidUser: 'user.paid',
-        user: 'user'
-        
-    });
+            console.log($scope);
+        }]);
+
 
 
 })(window, angular);

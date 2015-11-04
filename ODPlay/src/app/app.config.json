@@ -79,10 +79,16 @@
                 "name": "module-inc-session",
                 "file": "module-inc-session"
             },
-             {
+            {
                 "dir": "app-router/",
                 "name": "module-app-router",
                 "file": "module-app-router"
+            },
+
+            {
+                "dir": "app-controllers/",
+                "name": "module-app-controllers",
+                "file": "module-app-controllers"
             }
         ]
     }

@@ -3,12 +3,21 @@
     var moduleName = window.APP.ModuleNames.router || 'App',
         appConfig = window.APP.ModuleNames.config;
     
-    var appRouter = angular.module(moduleName, ['ngRoute', 'ui.router', appConfig])
+    var appRoutes = angular.module('ODPApp.Routes', ['ui.router', 'ODPApp.Config', 'ngRoute'])
     
-    appRouter.config(['$stateProvider', '$urlRouterProvider', 'USER_ROLES', function ($stateProvider, $urlRouterProvider, USER_ROLES) {
+    var USER_ROLES = {
+        admin: '',
+        all: '',
+        guest: '',
+        
+    }
+
+    appRoutes.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 'USER_ROLES', function ($stateProvider, $urlRouterProvider, $locationProvider, USER_ROLES) {
+            $locationProvider.html5Mode(true);
+
             var root = {
                 url: '/',
-                templateUrl: 'views/pages/page-home-view.html',
+                templateUrl: 'views/pages/home/page-home-view.html',
                 controller: 'HomePageCtrl',
                 data: {
                     protected: false,
@@ -18,8 +27,8 @@
    
             var register = {
                 url: '/register',
-                templateUrl: './views/pages/page-register-view.html',
-                controller: 'RegisterCtrl',
+                templateUrl: 'views/pages/register/page-register-view.html',
+                controller: 'RegisterPageCtrl',
                 data: {
                     protected: false,
                     authorisedRoles: [USER_ROLES.admin, USER_ROLES.all, USER_ROLES.guest, USER_ROLES.all]
@@ -29,7 +38,7 @@
             
             var dashboard = {
                 url: '/dashboard',
-                templateUrl: 'views/pages/dashboard.html',
+                templateUrl: 'views/pages/dashboard/page-dashboard-view.html',
                 controller: 'DashboardCtrl',
                 data: {
                     protected: true,
@@ -39,7 +48,7 @@
             
             var dashboardUserList = {
                 url: '/users',
-                templateUrl: 'views/pages/dashboard.html',
+                templateUrl: 'views/pages/users/page-users-view.html',
                 controller: 'DashboardCtrl',
                 data: {
                     protected: true,

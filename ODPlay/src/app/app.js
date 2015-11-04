@@ -1,13 +1,16 @@
 ﻿(function (window, angular) {
     
-    var moduleName = window.APP.ModuleNames.main || 'App',
-        routerModuleName = window.APP.ModuleNames.router || 'App.Router';
-
+    var moduleName = 'app',
+        routesModule = window.APP.ModuleNames.routes || 'App.Routes',
+        appControllers = window.APP.ModuleNames.controllers || 'App.Router';
     
-   
-    var app = angular.module(moduleName, [routerModuleName]);
+    
+    
+    var app = angular.module(moduleName, [appControllers, routesModule]);
+    
+    app.controller('MainCtrl', function ($scope) { 
+    
+    })
 
 
-
-
-})(window, angular)
+})(window, angular);
