@@ -1,10 +1,6 @@
 describe("APP Setup", function () {
     
-    // beforeEach(function () {
-    //     player = new Player();
-    //     song = new Song();
-    // });
-    
+  
     
     var ModuleNames = window.APP.ModuleNames;
     

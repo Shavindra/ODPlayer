@@ -40,6 +40,7 @@
     <Compile Include="app_tasks\utils_clean_assets.js" />
     <Compile Include="gulpfile.js" />
     <Compile Include="server.js" />
+    <Compile Include="src\app\app.config.js" />
     <Compile Include="src\app\app_require.js" />
     <Compile Include="src\app\assets\js\libs\angular-animate\angular-animate.js" />
     <Compile Include="src\app\assets\js\libs\angular-animate\angular-animate.min.js" />
@@ -170,6 +171,7 @@
     <Compile Include="test\unit\specs\modules\app-router\spec_module-app-router.js" />
     <Compile Include="test\unit\specs\modules\app-session\spec_module-inc-session.js" />
     <Compile Include="test\unit\specs\services\svc\spec_svc_.js" />
+    <Compile Include="test\unit\specs\spec_app.config.js" />
     <Compile Include="test\unit\specs\spec_app.js" />
     <Compile Include="test\unit\specs\views\compnents\footer\spec_cmpt-footer-controller.js" />
     <Compile Include="test\unit\specs\views\compnents\header\spec_cmpt-header-controller.js" />

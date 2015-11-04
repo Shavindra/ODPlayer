@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html ng-app="ODPApp">
 <head>
     <meta charset="utf-8" />
@@ -10,13 +10,19 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
     <title>ODPlayer</title>
     <!-- bower:css -->
-     <link rel="stylesheet" type="text/css" href="assets/styles/css/vendor/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="assets/styles/css/vendor/bootstrap/bootstrap.css" />
     <!-- endbower -->
     <!-- ODPlayer references -->
     <link href="css/index.css" rel="stylesheet" />
 </head>
 <body>
     <p>Hello, your application is ready!</p>
+    <ul>
+        <li>
+            <a href="/login">Login</a>
+        </li>
+    </ul>
+    <div ng-view class="view-frame"></div>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="assets/js/libs/angular/angular.js"></script>
@@ -34,11 +40,14 @@
     <!-- endbower -->
     <!-- endbuild -->
 
+
     <!-- Cordova reference, this is added to your app when it's built. -->
-    <script src="cordova.js"></script>
-    <script src="scripts/platformOverrides.js"></script>
+    <!--   <script src="cordova.js"></script>
+       <script src="scripts/platformOverrides.js"></script>-->
     <script src="app_require.js"></script>
+    <script src="app.config.js"></script>
     <script src="app.js"></script>
-    <script src="scripts/index.js"></script>
+    <script src="modules/app-router/module-app-router.js"></script>
+    <!--<script src="scripts/index.js"></script>-->
 </body>
 </html>

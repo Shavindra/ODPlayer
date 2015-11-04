@@ -1,10 +1,11 @@
 (function (window, angular) {
     
-    var moduleName = window.APP.ModuleNames.router || 'App';
+    var moduleName = window.APP.ModuleNames.router || 'App',
+        appConfig = window.APP.ModuleNames.config;
     
-    var appRouter = angular.module(moduleName, ['ngRoute', 'ui.router'])
+    var appRouter = angular.module(moduleName, ['ngRoute', 'ui.router', appConfig])
     
-    appRouter.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+    appRouter.config(['$stateProvider', '$urlRouterProvider', 'USER_ROLES', function ($stateProvider, $urlRouterProvider, USER_ROLES) {
             var root = {
                 url: '/',
                 templateUrl: 'views/pages/page-home-view.html',
@@ -14,11 +15,10 @@
                     authorisedRoles: '*'
                 }
             }
-
-            
+   
             var register = {
                 url: '/register',
-                templateUrl: 'views/pages/register.html',
+                templateUrl: './views/pages/page-register-view.html',
                 controller: 'RegisterCtrl',
                 data: {
                     protected: false,
