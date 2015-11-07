@@ -1,16 +1,26 @@
 (function (window, angular) {
     
-    var appModuleName = window.APP.ModuleNames.main || 'App',
-        appConfig = window.APP.ModuleNames.config,
-        appControllers = window.APP.ModuleNames.controllers;
+    var moduleNames = window.APP.ModuleNames,
+        appName = moduleNames.main || 'App',
+        appConfigName = moduleNames.config,
+        controllerModuleName = window.APP.ModuleNames.controllers || 'App.Controllers';
 
-        app = angular.module(appControllers, [appConfig]);
+      // var app = angular.module('ODPApp.Controllers');
     
-        app.controller('RegisterPageCtrl', ['$scope', function ($scope) { 
-        
+    var controllers = angular.module(controllerModuleName)
+      
+    controllers.controller('RegisterPageCtrl', ['$scope', function ($scope) { 
             console.log($scope);
         }]);
 
+    
+
+
+    if (window.DEBUG.status) {
+
+        console.log('RegisterPageCtrl');
+
+    }
 
 
 })(window, angular);

@@ -15,6 +15,48 @@
                         "controller": "page-home-controller",
                         "template": "page-home-view"
                     },
+                     {
+                        "dir": "channels/",
+                        "name": "page-channels",
+                        "controller": "page-channels-controller",
+                        "template": "page-channels-view"
+                    },
+                    {
+                        "dir": "channels/channel-single/",
+                        "name": "page-channel-single",
+                        "controller": "page-channel-single-controller",
+                        "template": "page-channel-single-view"
+                    }, 
+                    {
+                        "dir": "programmes/",
+                        "name": "page-programmes",
+                        "controller": "page-programmes-controller",
+                        "template": "page-programmes-view"
+                    },
+                    {
+                        "dir": "programmes/programmes-single/",
+                        "name": "page-programmes-single",
+                        "controller": "page-programmes-single-controller",
+                        "template": "page-programmes-single-view"
+                    },
+                    {
+                        "dir": "programmes/episode/",
+                        "name": "page-episode",
+                        "controller": "page-episodes-controller",
+                        "template": "page-episode-view"
+                    },
+                    {
+                        "dir": "categories/",
+                        "name": "page-categories",
+                        "controller": "page-categories-controller",
+                        "template": "page-categories-view"
+                    },
+                    {
+                        "dir": "categories/category-single/",
+                        "name": "page-category-single",
+                        "controller": "page-category-single-controller",
+                        "template": "page-category-single-view"
+                    },
                     {
                         "dir": "register/",
                         "name": "page-register",

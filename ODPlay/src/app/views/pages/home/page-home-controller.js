@@ -1,16 +1,23 @@
 (function (window, angular) {
     
-    var appModuleName = window.APP.ModuleNames.main || 'App',
-        appConfig = window.APP.ModuleNames.config,
-        appControllers = window.APP.ModuleNames.controllers;
+    var moduleNames = window.APP.ModuleNames,
+        appName = moduleNames.main || 'App',
+        appConfigName = moduleNames.config,
+        controllerModuleName = window.APP.ModuleNames.controllers || 'App.Controllers';
     
-    app = angular.module(appControllers, [appConfig]);
     
-    app.controller('HomePageCtrl', ['$scope', function ($scope) {
-            
+    var controllers = angular.module(controllerModuleName)
+    
+    controllers.controller('HomePageCtrl', ['$scope', function ($scope) {
             console.log($scope);
         }]);
+    
+    
+    if (window.DEBUG.status) {
+        
+        console.log('HomePageCtrl');
 
-
+    }
 
 })(window, angular);
+

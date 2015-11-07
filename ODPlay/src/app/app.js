@@ -1,16 +1,16 @@
 ﻿(function (window, angular) {
     
     var moduleName = 'app',
-        routesModule = window.APP.ModuleNames.routes || 'App.Routes',
-        appControllers = window.APP.ModuleNames.controllers || 'App.Router';
+        routesModuleName = window.APP.ModuleNames.routes || 'App.Routes',
+        appControllerName = window.APP.ModuleNames.controllers || 'App.Controllers';
     
+
+    angular.module(appControllerName, []);
     
+    var app = angular.module(moduleName, [appControllerName, routesModuleName]);
     
-    var app = angular.module(moduleName, [appControllers, routesModule]);
-    
-    app.controller('MainCtrl', function ($scope) { 
-    
-    })
 
 
-})(window, angular);
+
+})(window, angular, APP);
+

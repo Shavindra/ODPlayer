@@ -63,7 +63,7 @@
                 .state('dashboard.userlist', dashboardUserList);
             
             
-            $urlRouterProvider.otherwise("//");
+            $urlRouterProvider.otherwise("/");
     }]);
 
 
