@@ -1,46 +1,16 @@
-describe("APP Setup", function () {
+(function (window, angular) {
     
-  
+    var moduleName = 'app',
+        routesModuleName = window.APP.ModuleNames.routes || 'App.Routes',
+        appControllerName = window.APP.ModuleNames.controllers || 'App.Controllers';
     
-    var ModuleNames = window.APP.ModuleNames;
+
+    angular.module(appControllerName, []);
     
-    it("should define ModuleNames constants", function () {
-        
-        expect(ModuleNames.main).toBe('ODPApp');
-        expect(ModuleNames.router).toBe('ODPApp.Router');
-        //demonstrates use of custom matcher
-    });
+    var app = angular.module(moduleName, [appControllerName, routesModuleName]);
     
-    describe("Modules Loaded", function () {
-        
-        var appModule,
-            appRouter;
-        
-        beforeEach(function () {
-            appModule = angular.module("ODPApp");
-          //  
-        
-        });
-        
-        describe('App Module', function () {
-            
-            it('should instantiate the modules by the name ODPApp', function () {
-                expect(appModule.name).toBe('ODPApp');
-            });
 
-            
-            describe('App Router', function () {
-                appRouter = angular.module("ODPApp.Router");
 
-                it('should instantiate the modules by the name ODPApp.Router', function () {
-                    expect(appRouter.name).toBe('ODPApp.Router');
-                });
-        
-            })
-        
-        })
-   
 
-    });
+})(window, angular, APP);
 
-})

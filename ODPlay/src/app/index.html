@@ -3,12 +3,6 @@
 <head>
     <meta charset="utf-8" />
     <base href="/#">
-
-    <!--
-        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
-        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
-    -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
     <title>ODPlayer</title>
     <!-- bower:css -->
     <link rel="stylesheet" type="text/css" href="assets/styles/css/vendor/bootstrap/bootstrap.css" />
@@ -16,14 +10,29 @@
     <!-- ODPlayer references -->
     <link href="css/index.css" rel="stylesheet" />
 </head>
-<body>
-    <p>Hello, your application is ready!</p>
-    <ul>
-        <li>
-            <a href="/login">Login</a>
-        </li>
-    </ul>
-    <div ui-view class="view-frame"></div>
+<body ng-controller="MainCtrl">
+    <div class="wrapper-page">
+        <div class="wrapper-header">
+            <div class="header-container">
+                <div class="slide-animate" ng-include="components.header.src"></div>
+
+            </div>
+        </div>
+        <div class="wrapper-container">
+            <div class="content-container">
+                Content
+                <div ui-view class="view-frame"></div>
+
+            </div>
+        </div>
+        <div class="wrapper-footer">
+            <div class="footer-conatiner">
+                Footer
+            </div>
+        </div>
+
+    </div>
+
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="assets/js/libs/angular/angular.js"></script>
@@ -49,7 +58,7 @@
     <script src="modules/app-router/module-app-router.js"></script>
     <script src="modules/app-controllers/module-app-controllers.js"></script>
     <script src="modules/app-session/module-inc-session.js"></script>
-
+    <script src="directives/include-replace/include-replace-directive.js"></script>
     <!-- views -->
     <script src="views/pages/register/page-register-controller.js"></script>
 

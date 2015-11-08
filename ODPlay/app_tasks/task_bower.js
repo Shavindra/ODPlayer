@@ -94,7 +94,7 @@ gulp.task('bower-copy', function () {
     .pipe(rename(function (path) {
         
         var dirSuffix = path.dirname.indexOf("\\") > -1 ? path.dirname.split('\\')[0] : path.dirname;
-        path.dirname = renameDirPaths('', path.extname, dirSuffix);
+        path.dirname = renameDir('', path.extname, dirSuffix);
         
         
         return path;

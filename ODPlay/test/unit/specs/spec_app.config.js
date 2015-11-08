@@ -1,57 +1,65 @@
-describe("APP CONFIG", function () {
+(function (window, angular) {
     
-    
- //   var configModuleName = window.APP.ModuleNames.config;
-    
-    
-    
-    beforeEach(module('ODPApp.Config'));
-    
-    var APP_META, MODULE_NAMES, USER_ROLES, VIEWS;
-    
-    describe("App Meta", function () {
-        
-        beforeEach(function () {
-                 
-            inject(function ($injector) {
-                APP_META = $injector.get('APP_META');                
-            });
 
-        });
-        
-        describe("Required properties", function () { 
-        
-            it('should have AppName', function () {
-                expect(APP_META.hasOwnProperty('appName')).toBe(true);
-            });
+    var configModuleName = window.APP.ModuleNames.config || 'App.Config',
+        app = angular.module(configModuleName, []);
+    
+    //App meta data
+    app.constant('APP_META', {
 
-            it('should have appVersion', function () {
-                expect(APP_META.hasOwnProperty('appVersion')).toBe(true);
-            });
+        appName: 'OD Player',
+        appVersion: '2.0',
+        apiUrl: 'http://www.google.com?api'
+        
+    });
+    
+    //App module names
+    app.constant('MODULE_NAMES', window.APP.ModuleNames);
+    
+    //App user roles
+    app.constant('USER_ROLES', {
+        
+        all: '*',
+        admin: 'admin',
+        guest: 'http://www.google.com?api',
+        paidUser: 'user.paid',
+        user: 'user'
+        
+    });
 
-            it('should have apiUrl', function () {
-                expect(APP_META.hasOwnProperty('apiUrl')).toBe(true);
-            });
-        })
-        
-        
-        describe("Expected property values", function () {
+    //App user roles
+    app.constant('VIEWS', {
+        //TODO Dynamically create this
+        pages: {
+            home: {
+                controller: 'HomePageCtrl',
+                template: 'views/pages/register/page-register-view.html'
+            }, 
+            register: {
+                controller: 'RegisterPageCtrl',
+                template: 'views/pages/register/page-register-view.html'
+            },
             
-            it('appName should have value "OD Player"', function () {
-                expect(APP_META.appName).toBe("OD Player");
-            });
+            dashboard: {
+                controller: 'DashboardPageCtrl',
+                template: 'views/pages/register/page-register-view.html'
+            }
+            
+        },
 
-            it('appVersion should have value "2.0"', function () {
-                expect(APP_META.appVersion).toBe("2.0");
-            });
-
-            it('should apiUrl have value "OD Player"', function () {
-                expect(APP_META.apiUrl).toBe("http://www.google.com?api");
-            });
-
-        })
+        components: {
+            footer: {
+                controller: 'FooterCmptCtrl',
+                template: 'views/pages/register/page-register-view.html'
+            }, 
+            header: {
+                controller: 'HeaderCmptCtrl',
+                template: 'views/pages/register/page-register-view.html'
+            },
+        }
         
 
     });
 
-})
+
+})(window, angular);

@@ -13,7 +13,11 @@
     }
 
     appRoutes.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 'USER_ROLES', function ($stateProvider, $urlRouterProvider, $locationProvider, USER_ROLES) {
-            $locationProvider.html5Mode(true);
+            
+            $locationProvider.html5Mode({
+                enabled: true,
+                requireBase: true
+            });
 
             var root = {
                 url: '/',

@@ -15,7 +15,7 @@
                         "controller": "page-home-controller",
                         "template": "page-home-view"
                     },
-                     {
+                    {
                         "dir": "channels/",
                         "name": "page-channels",
                         "controller": "page-channels-controller",
@@ -26,7 +26,7 @@
                         "name": "page-channel-single",
                         "controller": "page-channel-single-controller",
                         "template": "page-channel-single-view"
-                    }, 
+                    },
                     {
                         "dir": "programmes/",
                         "name": "page-programmes",
@@ -84,7 +84,7 @@
                 ]
             },
             "components": {
-                "dir": "compnents/",
+                "dir": "components/",
                 "list": [
                     {
                         "dir": "header/",
@@ -109,30 +109,59 @@
                     "dir": "svc/",
                     "name": "svc_",
                     "file": "svc_"
+                },
+                {
+                    "dir": "channels/",
+                    "name": "channels-service",
+                    "file": "channels-service"
+                },
+                {
+                    "dir": "programmes/",
+                    "name": "programmes-service",
+                    "file": "programmes-service"
+                },
+                {
+                    "dir": "single-programme/",
+                    "name": "single-programme-service",
+                    "file": "single-programme-service"
+                }
+
+            ]
+        },
+
+        "modules": {
+            "dir": "modules/",
+            "list": [
+                {
+                    "dir": "app-session/",
+                    "name": "module-inc-session",
+                    "file": "module-inc-session"
+                },
+                {
+                    "dir": "app-router/",
+                    "name": "module-app-router",
+                    "file": "module-app-router"
+                },
+
+                {
+                    "dir": "app-controllers/",
+                    "name": "module-app-controllers",
+                    "file": "module-app-controllers"
                 }
             ]
         },
-        
-        "modules": {
-        "dir": "modules/",
-        "list": [
-            {
-                "dir": "app-session/",
-                "name": "module-inc-session",
-                "file": "module-inc-session"
-            },
-            {
-                "dir": "app-router/",
-                "name": "module-app-router",
-                "file": "module-app-router"
-            },
+        "directives": {
+            "dir": "directives/",
+            "list": [
 
-            {
-                "dir": "app-controllers/",
-                "name": "module-app-controllers",
-                "file": "module-app-controllers"
-            }
-        ]
+                {
+                    "dir": "include-replace/",
+                    "name": "include-replace-directive",
+                    "file": "include-replace-directive"
+                }
+            ]
+        }
+
+
     }
-    }
-}
+} 
